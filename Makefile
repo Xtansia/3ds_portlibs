@@ -1,7 +1,7 @@
 BZIP2                 := bzip2
 BZIP2_VERSION         := $(BZIP2)-1.0.6
 BZIP2_SRC             := $(BZIP2_VERSION).tar.gz
-BZIP2_DOWNLOAD        := "http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz"
+BZIP2_DOWNLOAD        := http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
 
 FREETYPE              := freetype
 FREETYPE_VERSION      := $(FREETYPE)-2.6.2
@@ -11,7 +11,7 @@ FREETYPE_DOWNLOAD     := http://download.savannah.gnu.org/releases/freetype/free
 GIFLIB                := giflib
 GIFLIB_VERSION        := $(GIFLIB)-5.1.1
 GIFLIB_SRC            := $(GIFLIB_VERSION).tar.bz2
-GIFLIB_DOWNLOAD       := "http://sourceforge.net/projects/giflib/files/giflib-5.1.1.tar.bz2"
+GIFLIB_DOWNLOAD       := http://sourceforge.net/projects/giflib/files/giflib-5.1.1.tar.bz2
 
 JANSSON               := jansson
 JANSSON_VERSION       := $(JANSSON)-2.7
@@ -21,7 +21,7 @@ JANSSON_DOWNLOAD      := https://github.com/akheron/jansson/archive/v2.7.tar.gz
 LIBCONFIG             := libconfig
 LIBCONFIG_VERSION     := $(LIBCONFIG)-1.5
 LIBCONFIG_SRC         := $(LIBCONFIG_VERSION).tar.gz
-LIBCONFIG_DOWNLOAD    := "http://www.hyperrealm.com/libconfig/libconfig-1.5.tar.gz"
+LIBCONFIG_DOWNLOAD    := http://www.hyperrealm.com/libconfig/libconfig-1.5.tar.gz
 
 LIBEXIF               := libexif
 LIBEXIF_VERSION       := $(LIBEXIF)-0.6.21
@@ -36,12 +36,12 @@ LIBJPEGTURBO_DOWNLOAD := http://sourceforge.net/projects/libjpeg-turbo/files/1.4
 LIBMAD                := libmad
 LIBMAD_VERSION        := $(LIBMAD)-0.15.1b
 LIBMAD_SRC            := $(LIBMAD_VERSION).tar.gz
-LIBMAD_DOWNLOAD       := "http://sourceforge.net/projects/mad/files/libmad/0.15.1b/libmad-0.15.1b.tar.gz"
+LIBMAD_DOWNLOAD       := http://sourceforge.net/projects/mad/files/libmad/0.15.1b/libmad-0.15.1b.tar.gz
 
 LIBOGG                := libogg
 LIBOGG_VERSION        := $(LIBOGG)-1.3.2
 LIBOGG_SRC            := $(LIBOGG_VERSION).tar.xz
-LIBOGG_DOWNLOAD       := "http://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.xz"
+LIBOGG_DOWNLOAD       := http://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.xz
 
 LIBPNG                := libpng
 LIBPNG_VERSION        := $(LIBPNG)-1.6.21
@@ -51,7 +51,7 @@ LIBPNG_DOWNLOAD       := http://prdownloads.sourceforge.net/libpng/libpng-1.6.21
 LIBXML2               := libxml2
 LIBXML2_VERSION       := $(LIBXML2)-2.9.3
 LIBXML2_SRC           := $(LIBXML2_VERSION).tar.gz
-LIBXML2_DOWNLOAD      := "http://xmlsoft.org/sources/libxml2-2.9.3.tar.gz"
+LIBXML2_DOWNLOAD      := http://xmlsoft.org/sources/libxml2-2.9.3.tar.gz
 
 LIBXMP_LITE           := libxmp-lite
 LIBXMP_LITE_VERSION   := $(LIBXMP_LITE)-4.3.10
@@ -61,7 +61,7 @@ LIBXMP_LITE_DOWNLOAD  := http://sourceforge.net/projects/xmp/files/libxmp/4.3.10
 MBED                  := mbedtls
 MBED_VERSION          := $(MBED)-2.2.1
 MBED_SRC              := $(MBED_VERSION).tgz
-MBED_DOWNLOAD         := "https://tls.mbed.org/download/mbedtls-2.2.1-gpl.tgz"
+MBED_DOWNLOAD         := https://tls.mbed.org/download/mbedtls-2.2.1-gpl.tgz
 
 SQLITE                := sqlite
 SQLITE_VERSION        := $(SQLITE)-autoconf-3100200
@@ -81,7 +81,7 @@ TREMOR_DOWNLOAD       := https://git.xiph.org/?p=tremor.git;a=snapshot;h=2a1a8f6
 XZ                    := xz
 XZ_VERSION            := $(XZ)-5.2.2
 XZ_SRC                := $(XZ_VERSION).tar.xz
-XZ_DOWNLOAD           := "http://tukaani.org/xz/xz-5.2.2.tar.xz"
+XZ_DOWNLOAD           := http://tukaani.org/xz/xz-5.2.2.tar.xz
 
 ZLIB                  := zlib
 ZLIB_VERSION          := $(ZLIB)-1.2.8
@@ -145,10 +145,10 @@ $(BZIP2_SRC):
 	@$(call DOWNLOAD,$@,$(BZIP2_DOWNLOAD))
 
 $(FREETYPE_SRC):
-	$(call DOWNLOAD,$@,$(FREETYPE_DOWNLOAD))
+	@$(call DOWNLOAD,$@,$(FREETYPE_DOWNLOAD))
 
 $(GIFLIB_SRC):
-	$(call DOWNLOAD,$@,$(GIFLIB_DOWNLOAD))
+	@$(call DOWNLOAD,$@,$(GIFLIB_DOWNLOAD))
 
 $(JANSSON_SRC):
 	@$(call DOWNLOAD,$@,$(JANSSON_DOWNLOAD))
